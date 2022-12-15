@@ -34,7 +34,7 @@ class HYRequest {
       (config) => {
         if (this.showLoading) {
           this.elLoading = ElLoading.service({
-            lock: true,
+            // lock: true,
             text: '正在加载中，请稍后....',
             background: 'rgba(0, 0, 0, .6)'
           })
@@ -49,7 +49,7 @@ class HYRequest {
       (result) => {
         setTimeout(() => {
           this.elLoading?.close()
-        }, 500)
+        }, 100)
 
         const data = result.data
         if (data.returnCode === '-1001') {
